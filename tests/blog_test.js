@@ -6,7 +6,7 @@ Scenario('test something', (I) => {
   // empty because target url is already in cocecept.config.js
   I.amOnPage('/');
   
-  // out custom step!!!
+  // our custom step!!!
   I.clickCookieButton();
 
   // by text
