@@ -1,6 +1,8 @@
 
 // in this file you can append custom step methods to 'I' object
 
+const defaultWait = 5;
+
 module.exports = function() {
   return actor({
 
@@ -12,9 +14,9 @@ module.exports = function() {
     // It is recommended to place a general 'login' function here.
 
     clickCookieButton() {
-      this.waitForElement(this.cookiebanner, 10);
+      this.waitForElement(this.cookiebanner, defaultWait);
       this.click(this.cookieBtnAccept);
-      this.waitForInvisible(this.cookiebanner, 10);
+      this.waitForInvisible(this.cookiebanner, defaultWait);
     }
 
   });

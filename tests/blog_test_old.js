@@ -1,8 +1,6 @@
-/// <reference path="../steps.d.ts" />
+Feature('Homepage');
 
-Feature('Showing off Codecept');
-
-Scenario('test something', (I) => {
+Scenario('Showing off Codecept', (I) => {
   // empty because target url is already in cocecept.config.js
   I.amOnPage('/');
   
@@ -19,15 +17,14 @@ Scenario('test something', (I) => {
   I.waitForInvisible({ css: '#cookiebanner'});
 
   // by text
-  I.click('Join Us');
+  I.click('Contact Us');
 
   // tell Codecept to wait for max. 10 second. Default is 1 second
-  I.waitForText('THE ICING ON THE CAKE', 10);
+  I.waitForText('THE DOOR IS ALWAYS OPEN', 10);
 
   // check url
-  I.seeInCurrentUrl('/join-us');
+  I.seeInCurrentUrl('/contact-us');
 
   // specify context
-  I.see('READING, UK', 'h2.block-header__title');
-  
+  I.see('READING UK', 'h2.block-header__title');
 });

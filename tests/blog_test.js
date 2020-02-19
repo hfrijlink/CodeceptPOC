@@ -1,8 +1,6 @@
-/// <reference path="../steps.d.ts" />
+Feature('Homepage');
 
-Feature('Showing off Codecept');
-
-Scenario('test something', (I) => {
+Scenario('Showing off Codecept', (I) => {
   // empty because target url is already in cocecept.config.js
   I.amOnPage('/');
   
